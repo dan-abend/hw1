@@ -1,7 +1,3 @@
-DROP TABLE IF EXISTS Movies;
-DROP TABLE IF EXISTS People;
-DROP TABLE IF EXISTS Roles;
-
 
 -- In this assignment, you'll be building the domain model, database 
 -- structure, and data for "KMDB" (the Kellogg Movie Database).
@@ -73,6 +69,10 @@ DROP TABLE IF EXISTS Roles;
 
 -- Drop existing tables, so you'll start fresh each time this script is run.
 -- TODO!
+
+DROP TABLE IF EXISTS movies;
+DROP TABLE IF EXISTS People;
+DROP TABLE IF EXISTS Roles;
 
 -- Create new tables, according to your domain model
 -- TODO!
@@ -176,6 +176,14 @@ values  (3, 12, '', 'director');
 .print "======"
 .print ""
 
+SELECT movies.title, movies.release_year, movies.mpaa_rating, people.first_name, people.last_name
+FROM movies
+INNER JOIN Roles
+on movies.id = Roles.movie_id
+INNER JOIN People
+on People.id = Roles.people_id
+WHERE roles.role = "director";
+
 -- The SQL statement for the movies output
 -- TODO!
 
@@ -185,6 +193,13 @@ values  (3, 12, '', 'director');
 .print "========"
 .print ""
 
+SELECT movies.title, people.first_name, people.last_name, roles.char_name
+FROM movies
+INNER JOIN Roles
+on movies.id = Roles.movie_id
+INNER JOIN People
+on People.id = Roles.people_id
+WHERE roles.role = "actor";
 
 -- The SQL statement for the cast output
 -- TODO!
