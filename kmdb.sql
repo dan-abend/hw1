@@ -102,6 +102,75 @@ CREATE TABLE Roles (
 -- Use hard-coded foreign key IDs when necessary
 -- TODO!
 
+Insert into movies (title, release_year, mpaa_rating)
+values  ('Batman Begins', 2005, 'PG-13');
+Insert into movies (title, release_year, mpaa_rating)
+values  ('The Dark Knight', 2008, 'PG-13');
+Insert into movies (title, release_year, mpaa_rating)
+values  ('The Dark Knight Rises', 2012, 'PG-13');
+
+Insert into People (first_name, last_name)
+values  ('Christian', 'Bale');
+Insert into People (first_name, last_name)
+values  ('Michael', 'Caine');
+Insert into People (first_name, last_name)
+values  ('Liam', 'Neeson');
+Insert into People (first_name, last_name)
+values  ('Katie', 'Holmes');
+Insert into People (first_name, last_name)
+values  ('Gary', 'Oldman');
+Insert into People (first_name, last_name)
+values  ('Heath', 'Ledger');
+Insert into People (first_name, last_name)
+values  ('Aaron', 'Eckhart');
+Insert into People (first_name, last_name)
+values  ('Maggie', 'Gyllenhaal');
+Insert into People (first_name, last_name)
+values  ('Tom', 'Hardy');
+Insert into People (first_name, last_name)
+values  ('Joseph', 'Gordon-Levitt');
+Insert into People (first_name, last_name)
+values  ('Anne', 'Hathaway');
+Insert into People (first_name, last_name)
+values  ('Christopher', 'Nolan');
+
+Insert into Roles (movie_id, people_id, char_name, role)
+values  (1, 1, 'Bruce Wayne', 'actor');
+Insert into Roles (movie_id, people_id, char_name, role)
+values  (1, 2, 'Alfred', 'actor');
+Insert into Roles (movie_id, people_id, char_name, role)
+values  (1, 3, "Ra's Al Ghul", 'actor');
+Insert into Roles (movie_id, people_id, char_name, role)
+values  (1, 4, 'Rachel Dawes', 'actor');
+Insert into Roles (movie_id, people_id, char_name, role)
+values  (1, 5, 'Commissioner Gordon', 'actor');
+Insert into Roles (movie_id, people_id, char_name, role)
+values  (1, 12, '', 'director');
+Insert into Roles (movie_id, people_id, char_name, role)
+values  (2, 1, 'Bruce Wayne', 'actor');
+Insert into Roles (movie_id, people_id, char_name, role)
+values  (2, 6, 'Joker', 'actor');
+Insert into Roles (movie_id, people_id, char_name, role)
+values  (2, 7, 'Harvey Dent', 'actor');
+Insert into Roles (movie_id, people_id, char_name, role)
+values  (2, 2, 'Alfred', 'actor');
+Insert into Roles (movie_id, people_id, char_name, role)
+values  (2, 8, 'Rachel Dawes', 'actor');
+Insert into Roles (movie_id, people_id, char_name, role)
+values  (2, 12, '', 'director');
+Insert into Roles (movie_id, people_id, char_name, role)
+values  (3, 1, 'Bruce Wayne', 'actor');
+Insert into Roles (movie_id, people_id, char_name, role)
+values  (3, 5, 'Commissioner Gordon', 'actor');
+Insert into Roles (movie_id, people_id, char_name, role)
+values  (3, 9, 'Bane', 'actor');
+Insert into Roles (movie_id, people_id, char_name, role)
+values  (3, 10, 'John Blake', 'actor');
+Insert into Roles (movie_id, people_id, char_name, role)
+values  (3, 11, 'Selina Kyle', 'actor');
+Insert into Roles (movie_id, people_id, char_name, role)
+values  (3, 12, '', 'director');
+
 -- Prints a header for the movies output
 .print "Movies"
 .print "======"
