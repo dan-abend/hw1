@@ -1,3 +1,8 @@
+DROP TABLE IF EXISTS Movies;
+DROP TABLE IF EXISTS People;
+DROP TABLE IF EXISTS Roles;
+
+
 -- In this assignment, you'll be building the domain model, database 
 -- structure, and data for "KMDB" (the Kellogg Movie Database).
 -- The end product will be a report that prints the movies and the 
@@ -72,6 +77,27 @@
 -- Create new tables, according to your domain model
 -- TODO!
 
+CREATE TABLE movies (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  title TEXT,
+  release_year INTEGER,
+  mpaa_rating TEXT
+);
+
+CREATE TABLE People (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  first_name TEXT,
+  last_name TEXT
+);
+
+CREATE TABLE Roles (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  movie_id INTEGER,
+  people_id INTEGER,
+  char_name TEXT,
+  role TEXT
+);
+
 -- Insert data into your database that reflects the sample data shown above
 -- Use hard-coded foreign key IDs when necessary
 -- TODO!
@@ -93,3 +119,5 @@
 
 -- The SQL statement for the cast output
 -- TODO!
+
+
